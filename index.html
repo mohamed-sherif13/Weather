@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+
+    <section id="home" class="home">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container mynav">
+
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo@2x.png" alt="logo">
+                    <div class="logo-type">
+                        <h1 class="site-title m-0 p-0">Weather</h1>
+                        <small class="site-description">tagline goes here</small>
+                    </div>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link current" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mylink" href="#">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mylink" href="#">Live cameras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mylink" href="#">Photos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mylink" href="#">Conatct</a>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+        <!-- ---------------form------------ -->
+        <div class="banner">
+            <div class="container">
+                <form class="myform">
+                    <input type="text" placeholder="Find your location..." id="search">
+                    <input type="button" value="Find" id="submit">
+                </form>
+            </div>
+        </div>
+        <div class="forecast-table">
+            <div class="container">
+                <div class="" id="forecast">
+                    <!-- -------------todays--------- -->
+                    <div class="row p-0 m-0 forecast-container">
+                        <div class="col-md-12 col-lg-4 p-0">
+                            <div class="today forecast">
+                                <div class="forecast-header d-flex justify-content-between align-items-center" id="today">
+                                    <div id="today_day"></div>
+                                    <div>
+                                        <span id="today_Number" class="m-0 p-0"></span>
+                                        <p id="today_month" class="d-inline-block"></p>
+
+                                    </div>
+                                </div>
+                                <div class="forecast-content" id="current">
+                                    <div id="location" class="location"></div>
+                                    <div class="degree d-flex justify-content-between align-items-center">
+                                        <div class="num"><span id="todays_temp"></span><sup>o</sup>C</div>
+
+                                        <div class="forecast-icon">
+                                            <img id="todays_Cond_img" src="" alt="" width="90">
+                                        </div>
+
+                                    </div>
+                                    <div id="todayConditionText" class="custom"></div>
+                                    <span><img src="https://routeweather.netlify.app/images/icon-umberella@2x.png" alt="" width="21" height="21"><span id="humidity"></span></span>
+                                    <span><img src="https://routeweather.netlify.app/images/icon-wind@2x.png" alt="" width="23" height="21"><span id="wind"></span></span>
+                                    <span><img src="https://routeweather.netlify.app/images/icon-compass@2x.png" alt="" width="21" height="21"><span id="windDirection"></span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- -------------next day--------- -->
+                        <div class="col-md-12 col-lg-4 p-0">
+                            <div class="next h-100">
+                                <div class="forecast">
+                                    <div class="forecast-header">
+                                        <div class="nextDay"></div>
+                                    </div>
+                                    <div class="forecast-content">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="forecast-icon">
+                                                    <img class="next_Cond_img" src="" alt="" width="48">
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="degree"><span class="nextMaxTemp"></span><sup>o</sup>C</div>
+                                            </div>
+                                            <div class="col-12"><small><span class="nextMinTemp"></span><sup>o</sup></small></div>
+                                            <div class="col-12">
+                                                <div class="custom">
+                                                    <p class="next_Cond_text"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- -------------third day--------- -->
+                        <div class="col-md-12 col-lg-4 p-0">
+                            <div class="forecast">
+                                <div class="forecast-header">
+                                    <div class="nextDay"></div>
+                                </div>
+                                <div class="forecast-content">
+                                    <div class="forecast-icon">
+                                        <img class="next_Cond_img" src="" alt="" width="48">
+                                    </div>
+                                    <div class="degree"><span class="nextMaxTemp"></span><sup>o</sup>C</div>
+                                    <small><span class="nextMinTemp"></span><sup>o</sup></small>
+                                    <div class="custom">
+                                        <p class="next_Cond_text"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer class="myfoot">
+            <div class="container">
+                <div class="row footerRow">
+                    <div class="col-md-8">
+                        <form class="subscribtion">
+                            <input type="text" placeholder="Enter your email To subscribe...">
+                            <input type="Submit" value="Subscribe" id="submit">
+                        </form>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="social">
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-4">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+            </div>
+
+        </footer>
+    </section>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

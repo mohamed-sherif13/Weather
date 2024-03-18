@@ -1,0 +1,27 @@
+@media (max-width: 991.98px) {
+    li {
+        margin-block: 5px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .social {
+        margin-top: 25px;
+        justify-content: center;
+        align-items: center;
+    }
+    .myfoot p {
+        text-align: center;
+    }
+    input[type="button"],
+    input[type="submit"] {
+        padding: 0 30px;
+        font-size: 12px;
+    }
+    input[type="submit"] {
+        padding: 0 10px;
+    }
+    .forecast.today .degree .num {
+        font-size: 70px;
+    }
+}
